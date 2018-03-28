@@ -33,7 +33,7 @@ public class CreateActivity extends Activity {
     long ilCurrentTime;
     long ilEventOccursOn;
     AppointmentData appointments;
-    public static final String sDateSentToCreateAppointment = "ilEventOccursOn";
+    public static String sDateSentToCreateAppointment = "ilEventOccursOn";
 
     String sDateOfAppointment;
     TextView tvChosenDate;

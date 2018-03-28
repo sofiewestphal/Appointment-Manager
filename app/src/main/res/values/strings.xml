@@ -31,4 +31,8 @@
     <string name="txtNumberToDelete">Enter Number of Appointment to Delete</string>
     <string name="txtConfirmDelete">Would You like to delete appointment:</string>
     <string name="lblDelete">Delete</string>
+
+    // Search Appointment
+    <string name="titleSearch">Search in Appointments</string>
+    <string name="hintSearch">Type in text to search for</string>
 </resources>

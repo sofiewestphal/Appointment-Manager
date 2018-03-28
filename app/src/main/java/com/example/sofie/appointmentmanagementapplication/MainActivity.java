@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 
     // VARIABLES
     long ilEventOccursOn;
+    long ilCurrentTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
 
         CalendarView cvCalenderView = (CalendarView) findViewById(R.id.cvCalenderView);
         // get the current time
-        long ilCurrentTime = currentTimeMillis ();
+        ilCurrentTime = currentTimeMillis ();
         // init the calender with the current day selected
         cvCalenderView.setDate(ilCurrentTime);
         // init the variable, which stores the time of the event with the current day
@@ -55,7 +56,9 @@ public class MainActivity extends Activity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                intent.putExtra(SearchActivity.sDateSentToSearchAppointment, ilEventOccursOn);
+                startActivity(intent);
             }
         });
 
