@@ -1,0 +1,34 @@
+<resources>
+    // General
+    <string name="lblSave">Save</string>
+    <string name="lblYes">Yes</string>
+    <string name="lblNo">No</string>
+
+    // Main Menu
+    <string name="app_name">Appointment Management</string>
+    <string name="lblCreateAppointment">Create Appointment</string>
+    <string name="lblViewEditAppointment">View/Edit Appointments</string>
+    <string name="lblDeleteAppointment">Delete Appointment</string>
+    <string name="lblMoveAppointment">Move Appointment</string>
+    <string name="lblSearch">Search</string>
+    
+    // Create Appointment
+    <string name="titleCreateAppointment">Create New Appointment</string>
+    <string name="lblTitleAppointment">Title of Appointment</string>
+    <string name="lblTimeAppointment">Time of Appointment</string>
+    <string name="lblDetailsAppointment">Details of Appointment</string>
+    <string name="error">(Web service error)</string>
+    <string name="interrupted">(Web service interrupted)</string>
+    <string name="no_results">(No suggestions)</string>
+    <string name="working">Working...</string>
+    <string name="btnThesaurus">Thesaurus</string>
+    <string name="lblThesaurus">Type word here</string>
+
+    // Delete Appointment
+    <string name="titleAppointments">Appointments</string>
+    <string name="lblDeleteAll">Delete All Appointments for This Day</string>
+    <string name="lblChooseWhichToDelete">Choose Appointment to Delete</string>
+    <string name="txtNumberToDelete">Enter Number of Appointment to Delete</string>
+    <string name="txtConfirmDelete">Would You like to delete appointment:</string>
+    <string name="lblDelete">Delete</string>
+</resources>

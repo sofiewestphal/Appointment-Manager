@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.sofie.appointmentmanagementapplication.CreateActivity">
+
+    <TextView
+        style="@style/ActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleCreateAppointment"/>
+
+    <fragment
+        android:id="@+id/fragment_create"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        class="com.example.sofie.appointmentmanagementapplication.CreateFragment"
+        tools:layout="@layout/fragment_create"/>
+
+    <fragment
+        android:id="@+id/fragment_thesarus"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        class="com.example.sofie.appointmentmanagementapplication.ThesarusFragment"
+        tools:layout="@layout/fragment_thesarus"/>
+
+</LinearLayout>
+
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sofie.appointmentmanagementapplication.MainActivity">
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lblSearch"/>
+
+    <CalendarView
+        android:id="@+id/cvCalenderView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="2">
+    </CalendarView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCreateAppointment"
+            style="@style/mainMenuButtons"
+            android:layout_marginEnd="8dp"
+            android:text="@string/lblCreateAppointment"/>
+
+        <Button
+            android:id="@+id/btnEditAppointment"
+            style="@style/mainMenuButtons"
+            android:text="@string/lblViewEditAppointment"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMoveAppointment"
+            style="@style/mainMenuButtons"
+            android:layout_marginEnd="8dp"
+            android:text="@string/lblMoveAppointment"/>
+
+        <Button
+            android:id="@+id/btnDeleteAppointment"
+            style="@style/mainMenuButtons"
+            android:text="@string/lblDeleteAppointment"/>
+
+    </LinearLayout>
+
+</LinearLayout>
