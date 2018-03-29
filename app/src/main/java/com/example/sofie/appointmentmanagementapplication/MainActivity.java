@@ -57,7 +57,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SearchActivity.class);
-                intent.putExtra(SearchActivity.sDateSentToSearchAppointment, ilEventOccursOn);
                 startActivity(intent);
             }
         });

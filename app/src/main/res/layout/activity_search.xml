@@ -24,9 +24,20 @@
         android:layout_height="wrap_content"
         android:text="@string/lblSearch"/>
 
-    <TextView
-        android:id="@+id/tvDisplaySearchedAppointments"
+    <LinearLayout
+
+        android:id="@+id/layoutAppointmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fl_search_activity"
+        android:layout_gravity="center">
+    </FrameLayout>
 
 </LinearLayout>
