@@ -75,17 +75,15 @@ public class DeleteChooseFragment extends Fragment {
 
             //get the columns of the record from the cursor and add them to the string builder
             iCounterAppointments++;
-            String sDate = cursor.getString(1);
             String sTitle = cursor.getString(2);
             String sTime = cursor.getString(3);
             String sDetails = cursor.getString(4);
             builder.append(iCounterAppointments).append(". ");;
-            builder.append(sDate).append(": ");
             builder.append(sTitle).append(": ");
             builder.append(sTime).append(": ");
             builder.append(sDetails).append("\n");
         }
-        // Display the string with the appontments on the screen
+        // Display the string with the appiontments on the screen
         tvDisplayAppointments.setText(builder);
     }
 
@@ -106,7 +104,7 @@ public class DeleteChooseFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 fragmentTransaction.replace(R.id.fl_delete_activity, DeleteConfirmFragment);
-                fragmentTransaction.addToBackStack(null);
+                //fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

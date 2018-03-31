@@ -25,11 +25,12 @@
     <string name="lblThesaurus">Type word here</string>
 
     // Delete Appointment
-    <string name="titleAppointments">Appointments</string>
+    <string name="titleDeleteAppointment">Delete Appointment</string>
+    <string name="titleAppointments">Choose Appointment to Delete:</string>
     <string name="lblDeleteAll">Delete All Appointments for This Day</string>
     <string name="lblChooseWhichToDelete">Choose Appointment to Delete</string>
-    <string name="txtNumberToDelete">Enter Number of Appointment to Delete</string>
-    <string name="txtConfirmDelete">Would You like to delete appointment:</string>
+    <string name="txtNumberToDelete">Enter Number of Appointment to Delete:</string>
+    <string name="txtConfirmDelete">Would you like to delete appointment:</string>
     <string name="lblDelete">Delete</string>
 
     // Search Appointment

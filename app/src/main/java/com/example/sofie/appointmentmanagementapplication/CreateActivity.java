@@ -32,6 +32,7 @@ public class CreateActivity extends Activity {
     // VARIABLES
     long ilCurrentTime;
     long ilEventOccursOn;
+    long ilEventOccursMilli;
     AppointmentData appointments;
     public static String sDateSentToCreateAppointment = "ilEventOccursOn";
 
@@ -143,7 +144,7 @@ public class CreateActivity extends Activity {
 
                     appointments = new AppointmentData(CreateActivity.this);
                     try {
-                        addAppointment(sDateOfAppointment, sEventTitle, sEventTime, sEventDescription);
+                        addAppointment(sDateOfAppointment, sEventTitle, sEventTime, sEventDescription, ilEventOccursOn);
                         confirmCreation();
                     } finally {
                         appointments.close();
@@ -187,9 +188,7 @@ public class CreateActivity extends Activity {
         tConfirmCreation.show();
     }
 
-    public void addAppointment(String sDateOfAppointment, String sEventTitle, String sEventTime, String sEventDescription){
-        String message = sDateOfAppointment + " " + sEventTitle + " " + sEventTime + " " + sEventDescription;
-        Log.v("hola", message);
+    public void addAppointment(String sDateOfAppointment, String sEventTitle, String sEventTime, String sEventDescription, long ilMilliSeconds){
 
         // get a new writable instance of the database
         SQLiteDatabase db = appointments.getWritableDatabase();
@@ -198,6 +197,7 @@ public class CreateActivity extends Activity {
         values.put("title", sEventTitle);
         values.put("time", sEventTime);
         values.put("description", sEventDescription);
+        values.put("milliseconds", ilMilliSeconds);
 
         db.insertOrThrow(AppointmentData.TABLE_NAME, null, values);
     }

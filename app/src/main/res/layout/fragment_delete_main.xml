@@ -3,18 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <Button
-        android:id="@+id/btnDeleteAll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lblDeleteAll"/>
+    android:orientation="vertical"
+    android:gravity="center">
 
     <Button
         android:id="@+id/btnChooseWhichToDelete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/bigButtons"
         android:text="@string/lblChooseWhichToDelete"/>
+
+    <Button
+        android:id="@+id/btnDeleteAll"
+        style="@style/warningButtons"
+        android:text="@string/lblDeleteAll"/>
 
 </LinearLayout>

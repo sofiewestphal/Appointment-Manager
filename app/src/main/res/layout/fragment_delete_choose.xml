@@ -7,6 +7,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
+        style="@style/h2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/titleAppointments"/>
@@ -18,6 +19,7 @@
 
     <TextView
         android:id="@+id/tvNumberToDelete"
+        style="@style/h2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txtNumberToDelete"/>
@@ -30,8 +32,7 @@
 
     <Button
         android:id="@+id/btnDeleteChosenAppointment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/warningButtons"
         android:text="@string/lblDelete"/>
 
 </LinearLayout>

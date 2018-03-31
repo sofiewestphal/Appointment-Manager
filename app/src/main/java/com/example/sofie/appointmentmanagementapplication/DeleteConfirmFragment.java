@@ -49,9 +49,10 @@ public class DeleteConfirmFragment extends Fragment {
 
     public Cursor getAppointmentToDelete(){
         String[] FROM = { "title", };
+        String WHERE = "_id=?";
 
         SQLiteDatabase db = appointments.getReadableDatabase();
-        Cursor cursor = db.query(AppointmentData.TABLE_NAME, FROM, null, null, null,
+        Cursor cursor = db.query(AppointmentData.TABLE_NAME, FROM, WHERE, new String[]{String.valueOf(DeleteActivity.iChosenIdToDelete)}, null,
                 null, null);
         return cursor;
     }
@@ -90,7 +91,7 @@ public class DeleteConfirmFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 fragmentTransaction.replace(R.id.fl_delete_activity, DeleteChooseFragment);
-                fragmentTransaction.addToBackStack(null);
+                //fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

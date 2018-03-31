@@ -8,7 +8,7 @@ public class AppointmentData extends SQLiteOpenHelper {
 
     // VARIABLES
     private static final String DATABASE_NAME = "appointments.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     public static String TABLE_NAME = "appointments";
 
     /* Create a helper object for the Appointment database */
@@ -24,7 +24,8 @@ public class AppointmentData extends SQLiteOpenHelper {
                         "date TEXT," +
                         "title TEXT," +
                         "time TEXT," +
-                        "description TEXT);"
+                        "description TEXT," +
+                        "milliseconds INTEGER);"
         );
     }
 

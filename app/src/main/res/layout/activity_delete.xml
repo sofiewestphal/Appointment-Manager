@@ -6,12 +6,22 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context="com.example.sofie.appointmentmanagementapplication.DeleteActivity">
 
     <TextView
-        android:id="@+id/tvChosenDateDeleteActivity"
+        style="@style/ActivityTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/titleDeleteAppointment"/>
+
+    <fragment
+        android:id="@+id/chosenDateinDeleteActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:name="com.example.sofie.appointmentmanagementapplication.ChosenDateFragment">
+    </fragment>
 
     <FrameLayout
         android:layout_width="match_parent"

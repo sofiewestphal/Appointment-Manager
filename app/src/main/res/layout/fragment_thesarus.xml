@@ -7,11 +7,13 @@
 
     <TextView
         android:layout_width="match_parent"
+        style="@style/ActivityTitle"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:text="@string/btnThesaurus" />
 
     <TextView
+        style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblThesaurus" />
@@ -28,6 +30,7 @@
 
         <Button
             android:id="@+id/btnThesaurus"
+            style="@style/smallButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnThesaurus"/>

@@ -6,25 +6,39 @@
     android:orientation="vertical">
 
     <TextView
+        style="@style/h2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txtConfirmDelete"/>
 
     <TextView
         android:id="@+id/tvDisplayAppointmentToDelete"
+        style="@style/paragraphItalic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnDeleteYes"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lblYes"/>
+        android:layout_marginBottom="20dp"/>
 
-    <Button
-        android:id="@+id/btnDeleteNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lblNo"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDeleteYes"
+            style="@style/warningButtons"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:text="@string/lblYes"/>
+
+        <Button
+            android:id="@+id/btnDeleteNo"
+            style="@style/smallButtons"
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:text="@string/lblNo"/>
+
+    </LinearLayout>
 
 </LinearLayout>

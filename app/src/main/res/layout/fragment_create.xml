@@ -15,6 +15,7 @@
 
     <TextView
         android:id="@+id/tvTitleOfAppointment"
+        style="@style/h2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lblTitleAppointment"/>
@@ -27,6 +28,7 @@
 
     <TextView
         android:id="@+id/tvTimeOfAppointment"
+        style="@style/h2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lblTimeAppointment"/>
@@ -39,6 +41,7 @@
 
     <TextView
         android:id="@+id/tvDetailsOfAppointment"
+        style="@style/h2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lblDetailsAppointment"/>
@@ -61,6 +64,7 @@
 
     <Button
         android:id="@+id/btnSaveAppointment"
+        style="@style/positiveButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lblSave"/>

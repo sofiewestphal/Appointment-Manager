@@ -21,6 +21,7 @@ import java.util.Calendar;
 
 public class SearchActivity extends Activity{
     long ilCurrentTime;
+    long ilCurrentTimeMilli;
     String sCurrentDate;
     AppointmentData appointments;
     //TextView tvDisplaySearchedAppointments;
@@ -52,6 +53,7 @@ public class SearchActivity extends Activity{
         Calendar c = Calendar.getInstance();
         // get the current time to use as default value for the event to be created.
         ilCurrentTime = c.get(Calendar.MILLISECOND);
+        ilCurrentTimeMilli = c.getTimeInMillis();
 
         // set the calendar instance to the chosen date
         c.setTimeInMillis(ilCurrentTime);
@@ -76,11 +78,6 @@ public class SearchActivity extends Activity{
             @Override
             public void onClick(View view) {
 
-               /* if (findViewById(R.id.tvSearchedAppointmentDetails) != null){
-                    tvSearchedAppointmentDetails = findViewById(R.id.tvSearchedAppointmentDetails);
-                    tvSearchedAppointmentDetails.setText("");
-                }*/
-
                 layoutAppointmentContainer.removeAllViews();
 
                 sSearchedString = etStringToSearch.getText().toString().toLowerCase();
@@ -95,16 +92,13 @@ public class SearchActivity extends Activity{
     }
 
     public Cursor getAppointments(){
-        String[] FROM = { "_id", "date", "title", "time", "description", };
-        String ORDER_BY = "time ASC";
-        String WHERE = "date>=?";
+        String[] FROM = { "_id", "date", "title", "time", "description, milliseconds", };
+        String ORDER_BY = "milliseconds ASC";
+        String WHERE = "milliseconds>=?";
 
         SQLiteDatabase db = appointments.getReadableDatabase();
-        Cursor cursor = db.query(AppointmentData.TABLE_NAME, FROM, WHERE, new String[]{sCurrentDate}, null,
+        Cursor cursor = db.query(AppointmentData.TABLE_NAME, FROM, WHERE, new String[]{String.valueOf(ilCurrentTimeMilli)}, null,
                 null, ORDER_BY);
-
-        //Cursor cursor = db.query(AppointmentData.TABLE_NAME, FROM, null, null, null,
-        //        null, ORDER_BY);
 
         return cursor;
     }
@@ -144,12 +138,9 @@ public class SearchActivity extends Activity{
                 });
             }
         }
-        // Display the string with the appointments on the screen
-        //tvDisplaySearchedAppointments.setText(builder);
     }
 
     public void showDetailsOfAppointment(){
-        Log.v("you clicked", "show details");
         // I use the FragmentManager to load the AppointmentDetailsFragment
         Fragment AppointmentDetailsFragment = new AppointmentDetailsFragment();
 

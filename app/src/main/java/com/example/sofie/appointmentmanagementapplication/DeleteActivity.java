@@ -14,10 +14,11 @@ import java.util.Calendar;
 public class DeleteActivity extends Activity {
 
     // VARIABLES
-    public static String sDateOfAppointment;
+    /*
     long ilEventOccursOn;
     long ilCurrentTime;
-    TextView tvChosenDateDeleteActivity;
+    TextView tvChosenDateDeleteActivity;*/
+    public static String sDateOfAppointment;
     public static int iChosenIdToDelete = 0;
     public static final String sDateSentToDeleteAppointment = "ilEventOccursOn";
 
@@ -26,8 +27,10 @@ public class DeleteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
 
+        setTheDateOfTheAppointment();
         addFragmentMain();
         getTheDateOfTheAppointment();
+
     }
 
     public void addFragmentMain(){
@@ -38,13 +41,15 @@ public class DeleteActivity extends Activity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.fl_delete_activity, DeleteMainFragment);
-        fragmentTransaction.addToBackStack(null);
+        //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
-    public void getTheDateOfTheAppointment() {
+    public void setTheDateOfTheAppointment() {
 
-        Calendar c = Calendar.getInstance();
+        ChosenDateFragment.ilEventOccursOn = getIntent().getLongExtra(sDateSentToDeleteAppointment, ChosenDateFragment.ilCurrentTime);
+
+        /*Calendar c = Calendar.getInstance();
         // get the current date to use as the default value for the date chosen by the user
         ilCurrentTime = c.get(Calendar.MILLISECOND);
         // get the date for which the user want to delete appointments
@@ -62,11 +67,15 @@ public class DeleteActivity extends Activity {
         // create a string displaying the date in DD:MM:YYYY format
         sDateOfAppointment = iDay + ". " + sMonth + " " + iYear;
         tvChosenDateDeleteActivity = findViewById(R.id.tvChosenDateDeleteActivity);
-        tvChosenDateDeleteActivity.setText(sDateOfAppointment);
+        tvChosenDateDeleteActivity.setText(sDateOfAppointment);*/
     }
 
-    public String getMonth(int month) {
+    /*public String getMonth(int month) {
         // return the month in string format
         return new DateFormatSymbols().getMonths()[month];
+    }*/
+
+    public void getTheDateOfTheAppointment(){
+        sDateOfAppointment = ChosenDateFragment.returnChosenDate();
     }
 }

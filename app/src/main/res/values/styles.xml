@@ -10,10 +10,52 @@
         <item name="android:fontFamily">Roboto</item>
     </style>
 
+    <style name="activityContainer">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
     <style name="mainMenuButtons">
         <item name="android:layout_weight">1</item>
         <item name="android:background">@drawable/menu_btn_background</item>
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="smallButtons">
+        <item name="android:background">@drawable/menu_btn_background</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="bigButtons">
+        <item name="android:background">@drawable/big_btn_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="warningButtons">
+        <item name="android:background">@drawable/warning_btn_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="positiveButtons">
+        <item name="android:background">@drawable/positive_btn_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:textSize">14sp</item>
@@ -26,8 +68,20 @@
         <item name="android:layout_marginBottom">5dp</item>
     </style>
 
+    <style name="h2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="paragraphItalic">
+        <item name="android:textStyle">italic</item>
+        <item name="android:gravity">center</item>
+    </style>
+
     <style name="ChosenDate">
         <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_marginBottom">5dp</item>
     </style>
