@@ -62,6 +62,17 @@
         <item name="android:layout_marginBottom">10dp</item>
     </style>
 
+    <style name="positiveFlatButtons">
+        <item name="android:background">@drawable/positive_flat_btn_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="ActivityTitle">
         <item name="android:textSize">26sp</item>
         <item name="android:gravity">center</item>

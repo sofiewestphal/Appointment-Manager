@@ -7,6 +7,7 @@ import android.app.FragmentTransaction;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -126,6 +127,12 @@ public class SearchActivity extends Activity{
                 tv.setText(builder);
                 btn.setId(iId);
                 btn.setText("Show details");
+                btn.setTextColor(Color.parseColor("#00BFBD"));
+                btn.setBackgroundResource(R.drawable.positive_flat_btn_background);
+                int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+                if(currentapiVersion >= 21){
+                    btn.setStateListAnimator(null);
+                }
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 layoutAppointmentContainer.addView(tv, layoutParams);
                 layoutAppointmentContainer.addView(btn, layoutParams);
