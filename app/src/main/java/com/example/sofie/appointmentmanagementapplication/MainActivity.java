@@ -74,6 +74,9 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+                intent.putExtra(ViewActivity.sDateSentToViewAppointment, ilEventOccursOn);
+                startActivity(intent);
             }
         });
 

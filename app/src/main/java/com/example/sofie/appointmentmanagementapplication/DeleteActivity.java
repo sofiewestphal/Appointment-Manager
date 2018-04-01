@@ -30,6 +30,7 @@ public class DeleteActivity extends Activity {
         setTheDateOfTheAppointment();
         addFragmentMain();
         getTheDateOfTheAppointment();
+        setDate();
 
     }
 
@@ -77,5 +78,9 @@ public class DeleteActivity extends Activity {
 
     public void getTheDateOfTheAppointment(){
         sDateOfAppointment = ChosenDateFragment.returnChosenDate();
+    }
+
+    public void setDate(){
+        ChooseAppointmentFragment.sDateofAppointment = sDateOfAppointment;
     }
 }
