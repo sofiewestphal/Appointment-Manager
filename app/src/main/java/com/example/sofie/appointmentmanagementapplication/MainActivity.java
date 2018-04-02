@@ -14,36 +14,12 @@ import static java.lang.System.currentTimeMillis;
 
 public class MainActivity extends Activity {
 
-    // VARIABLES
-    long ilEventOccursOn;
-    long ilCurrentTime;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CalendarView cvCalenderView = (CalendarView) findViewById(R.id.cvCalenderView);
-        // get the current time
-        ilCurrentTime = currentTimeMillis ();
-        // init the calender with the current day selected
-        cvCalenderView.setDate(ilCurrentTime);
-        // init the variable, which stores the time of the event with the current day
-        ilEventOccursOn = ilCurrentTime;
-
         initButtons();
-
-        // listen on change of selected day in the calendar
-        cvCalenderView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-
-            @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-                Calendar c = Calendar.getInstance();
-                c.set(year, month, day);
-                // save the new chosen day in the variable, which stores the time of the event
-                ilEventOccursOn=c.getTimeInMillis();
-            }
-        });
     }
 
     public void initButtons(){
@@ -65,7 +41,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CreateActivity.class);
-                intent.putExtra(CreateActivity.sDateSentToCreateAppointment, ilEventOccursOn);
+                intent.putExtra(CreateActivity.sDateSentToCreateAppointment, CalendarFragment.ilEventOccursOn);
                 startActivity(intent);
             }
         });
@@ -75,7 +51,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ViewActivity.class);
-                intent.putExtra(ViewActivity.sDateSentToViewAppointment, ilEventOccursOn);
+                intent.putExtra(ViewActivity.sDateSentToViewAppointment, CalendarFragment.ilEventOccursOn);
                 startActivity(intent);
             }
         });
@@ -84,7 +60,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MoveActivity.class);
-                intent.putExtra(MoveActivity.sDateSentToMoveAppointment, ilEventOccursOn);
+                intent.putExtra(MoveActivity.sDateSentToMoveAppointment, CalendarFragment.ilEventOccursOn);
                 startActivity(intent);
             }
         });
@@ -94,7 +70,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, DeleteActivity.class);
-                intent.putExtra(DeleteActivity.sDateSentToDeleteAppointment, ilEventOccursOn);
+                intent.putExtra(DeleteActivity.sDateSentToDeleteAppointment, CalendarFragment.ilEventOccursOn);
                 startActivity(intent);
 
             }

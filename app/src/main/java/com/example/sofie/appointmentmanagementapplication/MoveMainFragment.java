@@ -1,6 +1,8 @@
 package com.example.sofie.appointmentmanagementapplication;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +30,8 @@ public class MoveMainFragment extends Fragment {
         return rootView;
     }
 
+
+
     public void setText(){
         tvNumberToDelete.setText(R.string.txtNumberToMove);
         tvTitle.setText(R.string.titleMoveDisplayAppointments);
@@ -38,20 +42,20 @@ public class MoveMainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // get the number of the appointment the user has chosen to delete
-                    /*String siChosenIdToDelete = ChooseAppointmentFragment.etNumberToDelete.getText().toString();
-                    int iChosenIdToDelete = Integer.parseInt(siChosenIdToDelete);
+                String siChosenIdToDelete = ChooseAppointmentFragment.etNumberToDelete.getText().toString();
+                int iChosenIdToDelete = Integer.parseInt(siChosenIdToDelete);
 
-                    // replace the DeleteChooseFragment with DeleteConfirmFragment
-                    Fragment DeleteConfirmFragment = new DeleteConfirmFragment();
-                    // set the variable iChosenIdToDelete in DeleteActivity equal to the id of the appointment the user
-                    // wants to delete
-                    DeleteActivity.iChosenIdToDelete = ChooseAppointmentFragment.aiAppointmentIds[iChosenIdToDelete - 1];
-                    FragmentManager fragmentManager = getActivity().getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                // replace the DeleteChooseFragment with DeleteConfirmFragment
+                Fragment MoveChooseDateFragment = new MoveChooseDateFragment();
+                // set the variable iChosenIdToDelete in DeleteActivity equal to the id of the appointment the user
+                // wants to delete
+                MoveActivity.iChosenIdToDelete = ChooseAppointmentFragment.aiAppointmentIds[iChosenIdToDelete - 1];
+                FragmentManager fragmentManager = getActivity().getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                    fragmentTransaction.replace(R.id.fl_delete_activity, DeleteConfirmFragment);
+                fragmentTransaction.replace(R.id.fl_move_activity, MoveChooseDateFragment);
 
-                    fragmentTransaction.commit();*/
+                fragmentTransaction.commit();
             }
         });
     }

@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/activityContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_fragment"
     android:clipChildren="false"
+    android:orientation="vertical"
     tools:context="com.example.sofie.appointmentmanagementapplication.MainActivity">
+
+    <Button
+        android:id="@+id/btnSearch"
+        style="@style/bigButtons"
+        android:text="@string/lblSearch"/>
+
+    <fragment
+        android:id="@+id/fragment_calendar_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:name="com.example.sofie.appointmentmanagementapplication.CalendarFragment"
+        tools:layout="@layout/fragment_calendar"/>
 
     <fragment
         android:id="@+id/fragment_main"
@@ -17,6 +31,6 @@
         class="com.example.sofie.appointmentmanagementapplication.MainFragment"
         tools:layout="@layout/fragment_main"/>
 
-</FrameLayout>
+</LinearLayout>
 
 

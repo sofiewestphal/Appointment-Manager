@@ -49,4 +49,5 @@
     <string name="lblMove">Move</string>
     <string name="titleMoveDisplayAppointments">Choose Appointment to Move:</string>
     <string name="txtNumberToMove">Enter Number of Appointment to Move:</string>
+    <string name="titleChooseNewDate">Choose New Date for the Appointment:</string>
 </resources>

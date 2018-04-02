@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAppointmentToMove"
+        style="@style/paragraphItalic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/h2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleChooseNewDate"/>
+
+    <fragment
+        android:id="@+id/calendarinMoveActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.sofie.appointmentmanagementapplication.CalendarFragment">
+    </fragment>
+
+    <Button
+        android:id="@+id/btnConfirmMove"
+        style="@style/positiveButtons"
+        android:text="@string/lblMove"/>
+
+</LinearLayout>
