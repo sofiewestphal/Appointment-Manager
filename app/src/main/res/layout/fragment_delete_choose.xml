@@ -5,30 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        style="@style/h2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titleAppointments"/>
-
-    <TextView
-        android:id="@+id/tvDisplayAppointments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/tvNumberToDelete"
-        style="@style/h2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtNumberToDelete"/>
-
-    <EditText
-        android:id="@+id/etNumberToDelete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+  <fragment
+      android:id="@+id/chooseActivityinDeleteActivity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:name="com.example.sofie.appointmentmanagementapplication.ChooseAppointmentFragment">
+  </fragment>
 
     <Button
         android:id="@+id/btnDeleteChosenAppointment"
