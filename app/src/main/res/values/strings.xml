@@ -41,4 +41,12 @@
     // View Appointments
     <string name="titleViewAppointment">View Appointments</string>
     <string name="lblEdit">Edit</string>
+    <string name="titleViewDisplayAppointments">Choose Appointment to Edit:</string>
+    <string name="txtNumberToEdit">Enter Number of Appointment to Edit:</string>
+
+    // Move Appointments
+    <string name="titleMoveAppointment">Move Appointment</string>
+    <string name="lblMove">Move</string>
+    <string name="titleMoveDisplayAppointments">Choose Appointment to Move:</string>
+    <string name="txtNumberToMove">Enter Number of Appointment to Move:</string>
 </resources>

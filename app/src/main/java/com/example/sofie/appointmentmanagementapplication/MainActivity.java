@@ -83,7 +83,9 @@ public class MainActivity extends Activity {
         btnMoveAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this, MoveActivity.class);
+                intent.putExtra(MoveActivity.sDateSentToMoveAppointment, ilEventOccursOn);
+                startActivity(intent);
             }
         });
 
