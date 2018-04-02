@@ -5,15 +5,12 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,12 +22,10 @@ public class SearchActivity extends Activity{
     long ilCurrentTimeMilli;
     String sCurrentDate;
     AppointmentData appointments;
-    //TextView tvDisplaySearchedAppointments;
     LinearLayout layoutAppointmentContainer;
     Button btnSearchAppointment;
     EditText etStringToSearch;
     String sSearchedString;
-    TextView tvSearchedAppointmentDetails;
     public static int iAppointmentId;
 
     @Override

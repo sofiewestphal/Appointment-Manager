@@ -13,8 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Calendar;
-
 public class MoveChooseDateFragment extends Fragment {
     //VARIABLES
     AppointmentData appointments;

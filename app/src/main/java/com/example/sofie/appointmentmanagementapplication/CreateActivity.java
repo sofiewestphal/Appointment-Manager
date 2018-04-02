@@ -36,8 +36,7 @@ public class CreateActivity extends Activity {
     AppointmentData appointments;
     public static String sDateSentToCreateAppointment = "ilEventOccursOn";
 
-    String sDateOfAppointment;
-    TextView tvChosenDate;
+    public static String sDateOfAppointment;
     EditText inputTitleOfAppointment;
     EditText inputTimeOfAppointment;
     EditText inputDetailsOfAppointment;
@@ -61,8 +60,10 @@ public class CreateActivity extends Activity {
         setContentView(R.layout.activity_create);
 
         modifyEditText();
-        getTheDateOfTheAppointment();
         initSaveButton();
+        setTheDateOfTheAppointment();
+        getTheDateOfTheAppointment();
+        setDate();
 
         initThesatus();
         setAdapters();
@@ -79,32 +80,17 @@ public class CreateActivity extends Activity {
         etInputCity.setRawInputType(InputType.TYPE_CLASS_TEXT);
     }
 
-    public void getTheDateOfTheAppointment() {
-        Calendar c = Calendar.getInstance();
-        // get the current time to use as default value for the event to be created.
-        ilCurrentTime = c.get(Calendar.MILLISECOND);
-
-        // get the date the user chose to create an appointment on
-        ilEventOccursOn = getIntent().getLongExtra(sDateSentToCreateAppointment, ilCurrentTime);
-        // set the calendar instance to the chosen date
-        c.setTimeInMillis(ilEventOccursOn);
-
-        // get the day, month and year out of the time in milliseconds
-        int iYear = c.get(Calendar.YEAR);
-        int iMonth = c.get(Calendar.MONTH);
-        String sMonth = getMonth(iMonth);
-        int iDay = c.get(Calendar.DAY_OF_MONTH);
-
-        // create a string that display the day in DD:MM:YYYY format
-        sDateOfAppointment = iDay + ". " + sMonth + " " + iYear;
-        // set the TextView tvChosenDate to display the date
-        tvChosenDate = findViewById(R.id.tvChosenDate);
-        tvChosenDate.setText(sDateOfAppointment);
+    public void setTheDateOfTheAppointment() {
+        ChosenDateFragment.ilEventOccursOn = getIntent().getLongExtra(sDateSentToCreateAppointment, ChosenDateFragment.ilCurrentTime);
+        ilEventOccursOn = ChosenDateFragment.ilEventOccursOn;
     }
 
-    public String getMonth(int month) {
-        // return the month in string format
-        return new DateFormatSymbols().getMonths()[month];
+    public void getTheDateOfTheAppointment(){
+        sDateOfAppointment = ChosenDateFragment.returnChosenDate();
+    }
+
+    public void setDate(){
+        ChooseAppointmentFragment.sDateofAppointment = sDateOfAppointment;
     }
 
     public void initSaveButton(){

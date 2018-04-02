@@ -6,7 +6,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class MoveActivity extends Activity {
     // VARIABLES
@@ -34,7 +33,6 @@ public class MoveActivity extends Activity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.fl_move_activity, MoveMainFragment);
-        //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 

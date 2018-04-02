@@ -5,8 +5,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.widget.TextView;
-
 
 public class ViewActivity extends Activity {
 
@@ -35,7 +33,6 @@ public class ViewActivity extends Activity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.fl_view_activity, ViewMainFragment);
-        //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 

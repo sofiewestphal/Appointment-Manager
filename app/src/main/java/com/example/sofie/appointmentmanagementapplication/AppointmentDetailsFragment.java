@@ -60,11 +60,6 @@ public class AppointmentDetailsFragment extends Fragment {
             builder.append(sTime).append(": ");
             builder.append(sDetails).append("\n");
         }
-        Log.v("from db", builder+"");
-        /*int resId = getResources().getIdentifier(123 + SearchActivity.iAppointmentId+"", "id", "com.example.sofie.appointmentmanagementapplication");
-        TextView tv = getView().findViewById(resId);
-        tv.setText(builder);*/
-        //tvSearchedAppointmentDetails.setText(builder);
 
         createDialog(builder);
 

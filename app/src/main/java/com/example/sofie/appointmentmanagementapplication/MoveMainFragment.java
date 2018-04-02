@@ -43,19 +43,21 @@ public class MoveMainFragment extends Fragment {
             public void onClick(View view) {
                 // get the number of the appointment the user has chosen to delete
                 String siChosenIdToDelete = ChooseAppointmentFragment.etNumberToDelete.getText().toString();
-                int iChosenIdToDelete = Integer.parseInt(siChosenIdToDelete);
+                if(siChosenIdToDelete.trim().length() > 0){
+                    int iChosenIdToDelete = Integer.parseInt(siChosenIdToDelete);
 
-                // replace the DeleteChooseFragment with DeleteConfirmFragment
-                Fragment MoveChooseDateFragment = new MoveChooseDateFragment();
-                // set the variable iChosenIdToDelete in DeleteActivity equal to the id of the appointment the user
-                // wants to delete
-                MoveActivity.iChosenIdToDelete = ChooseAppointmentFragment.aiAppointmentIds[iChosenIdToDelete - 1];
-                FragmentManager fragmentManager = getActivity().getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    // replace the DeleteChooseFragment with DeleteConfirmFragment
+                    Fragment MoveChooseDateFragment = new MoveChooseDateFragment();
+                    // set the variable iChosenIdToDelete in DeleteActivity equal to the id of the appointment the user
+                    // wants to delete
+                    MoveActivity.iChosenIdToDelete = ChooseAppointmentFragment.aiAppointmentIds[iChosenIdToDelete - 1];
+                    FragmentManager fragmentManager = getActivity().getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                fragmentTransaction.replace(R.id.fl_move_activity, MoveChooseDateFragment);
+                    fragmentTransaction.replace(R.id.fl_move_activity, MoveChooseDateFragment);
 
-                fragmentTransaction.commit();
+                    fragmentTransaction.commit();
+                }
             }
         });
     }
